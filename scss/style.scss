@@ -49,3 +49,45 @@ img {max-width:100;}
 body {
     transition: opacity .25s ease;
 }
+
+.one, .two, .three {
+    max-width: 600px;
+    min-height: 400px;
+    background-color: #aaa;
+    margin: 4em auto;
+
+    &:after {
+        content: "#" attr(id);
+    }
+
+    // display: none;
+
+    &:target {
+        display: block;
+
+        & ~ .default {
+            // display: none;
+        }
+    }
+}
+
+.default {
+    max-width: 600px;
+    min-height: 400px;
+    background-color: #aaa;
+    margin: 4em auto;
+    background-color: indigo;
+    color: white;
+}
+
+a:visited {
+    color: inherit;
+}
+
+.two {
+    background-color: green;
+}
+
+.three {
+    background-color: chartreuse;
+}
